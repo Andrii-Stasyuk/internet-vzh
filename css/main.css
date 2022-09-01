@@ -1,0 +1,813 @@
+body{
+   margin: 0;
+   font-family: 'Montserrat',sans-serif;
+}
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+.container{
+margin: 0;
+max-width: 1110px;
+margin-left: auto;
+margin-right: auto;
+}
+.header{
+ position: relative; /* !*position  задає тип способу позиціонування , який використовується для елемента*!*!*!*!*/
+ display:flex; /* display задає відображення на сторінці ,вказує тип блока, який використовуться для HTML-елемента. Flex робить щоб 
+ елементи блоку були гнучкими (щоб можна було їх розташовувати вертикально чи горизонтально)  а не просто інлайновими чи блоковими */
+ flex-direction: column;/* визначає головну вісь по якій буде вирівнювання 
+ column- головна вісь y вертикально,  
+ по замовчуванні головна вісь x горизонтальна*/
+ justify-content: center; /* вирівнювання елементів в блоці  по головній осі*/
+ align-items: center; /*вирівнювання елементів в блоці по перпендикулярній осі до головної осі*/
+ /*z-index: 3;*/
+ 
+    width: 100%;
+    height: 100vh;
+    /* background-color: #526480; */
+     /* background-image:url("/video/vzk.jpg"); */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+   /* transition-property: transform;
+    transition-duration: 1s; */
+}
+/* .header{
+    transform: scale(1.1);
+} */
+.none{
+   display: none !important;
+}
+/* .header-menu {
+   position: absolute;
+   right: 60px;
+   top: 30px;
+  /* background-color: deeppink; */
+.video_media{
+   width: 100%;
+   height: auto;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1;
+
+}
+.register_buttons{
+   transform: translateY(-100%) scale(0);
+   position: absolute;
+   right: 10;
+   top: 10;
+   z-index: 10;
+   transition-duration: 1s;
+   transition-property: transform;
+}
+.form-user-login-popap{
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background-color: rgba(0, 0 ,0 ,0.8);
+   z-index: 10;
+   transform: translateY(-100%) scale(0);
+   transition-property: transform;
+   transition-duration: 0.7s;
+}
+.thanks_window{
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background-color: rgba(0, 0 ,0 ,0.8);
+   z-index: 10;
+   transform: translateY(-100%) scale(0);
+   transition-property: transform;
+   transition-duration: 0.7s;
+}
+.thanks_window_active{
+   transform: translateY(0) scale(1)
+}
+.form-user-login-popap-active{
+   transform: translateY(0) scale(1)
+}
+.register-active-buttons{
+   transform: translateY(0) scale(1);
+   margin-top: 50px;
+   transition-duration: 1s;
+   transition-property: transform;
+}
+
+.price{
+   display: flex;
+   color: white;
+   font-size: 25px;
+   justify-content: space-around;
+}
+
+.header-title{
+   font-weight: bold;
+   font-size: 56px;
+   line-height: 130%;
+   /* identical to box height, or 73px */
+   text-align: center;  
+   color: #FFFFFF;
+   margin: 0; 
+   margin-bottom: 25px;
+   z-index: 2;
+
+
+
+}
+.header-subtitle{
+   font-weight: bold;
+   font-size: 16px;
+   line-height: 150%;
+   /* identical to box height, or 24px */  
+   text-align: center;
+   letter-spacing: 0.2em;
+   text-transform: uppercase;   
+   color: #FFFFFF;
+   z-index: 2;
+}
+ 
+ .header-viber{ 
+     display: flex;
+    z-index: 2;
+}
+.viber-image{
+   width: 30px;
+   height: 30px;
+
+}
+
+.viber-name{
+   color: white;
+}
+.number{
+   color: white;
+
+}
+.register-button{
+   color: white;
+   text-decoration: none;
+   font-size: 33px;
+   font-weight: bold;
+   padding: 5px 10px;
+   z-index: 2;
+}
+.header-button{
+   z-index: 2;
+}
+.register-href:hover{
+   cursor: pointer;
+   text-decoration: none;
+   transform: scale(1.1);
+   transition: transform .2s linear;
+
+}
+.none-click{
+   position: relative;
+   pointer-events: none !important;
+}
+
+.none-click::after{
+   position: absolute;
+   content: 'На жаль, цей місяць закритий. Виберіть інший місяць';
+   background-color: rgba(0, 0 ,0 ,0.6) !important;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   right: 0;
+   display: flex;
+   align-items: center;
+   color: #fff;
+   padding: 0 10px;
+   font-size: 20px;
+   z-index: 1000;
+}
+
+.fa-bars{
+   text-align: center;
+   color: white;
+   text-decoration: none;
+   font-size: 33px;
+   font-weight: bold;
+   padding: 5px 10px;
+   z-index: 2;
+   position: absolute;
+    right: 0;
+    top: 0;
+}
+.a-paragrap{
+   text-align: center;
+   color: white;
+   text-decoration: none;
+   font-size: 33px;
+   font-weight: bold;
+   padding: 5px 10px;
+   z-index: 2;
+}
+.header-arrow{
+position: absolute;
+width: 48px;
+height: 48px;
+   z-index: 2;
+/* transform:translate(-50%,0); */
+/* transform для повороту і масштабування елементів
+З translate можно вырівнювати елементи по вертикалі.
+Але Переважно це робиться абсолютним позиціонуванням
+або заданням висоти стрічки
+Alt+Z перенос тексту з однієї стрічки в кілька  стрічок */
+bottom: 30px;
+}
+.portfolio-header{
+margin: 0;
+font-weight: bold;
+font-size: 46px;
+line-height: 130%;
+text-align: center;
+color: #000000;
+margin: 70px;
+}
+.porfolio-cards-wrapper{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between; 
+}
+.card{
+   margin: 0 auto;
+   background-color: white;
+   max-width: 540px;
+   padding: 20px;
+   margin-bottom: 30px;
+   box-shadow: 0px 10px 40px rgba(126,155,189,0.35);
+   transition-property: transform;
+   transition-duration: 1s;
+   width: 100%;
+}
+.card:hover{
+cursor: pointer;
+transform: scale(1.02);
+}
+
+.card-image{
+margin-bottom: 20px; 
+width: 100%;
+height: 240px;
+}
+
+
+.card-title{
+font-weight: 600;
+font-size: 24px;
+line-height: 130%;
+color: rgba(0,0,0,.1);
+}
+.card p {
+   font-size: 16px;
+   line-height: 130%;
+   color: #000000
+}
+
+.footer-content{
+   background: #cccccc;
+   padding: 20px 0;
+}
+
+.footer-links{
+   display: flex;
+   height: 100%;
+   align-items: center;
+   justify-content: space-around;
+}
+.footer-links a{
+   display: block;
+}
+.reserve-month-active{
+   background-color: lime!important;
+}
+.date-booked{
+   pointer-events: none !important;
+   background-color: #000000 !important;
+}
+.date-month-booked{
+   
+   background-color: #000000 !important;
+}
+.same_email{
+   border: 2px solid red!important;
+}
+.same_email_text{
+   font-size: 18px;
+   color: red;
+   margin-bottom: 10px;
+}
+
+.footer-info span{
+   display: block;
+   font-size: 18px;
+   color: #333;
+   font-weight: 700;
+   text-align: center;
+}
+.footer-contacts{
+   margin-top: 23px;
+}
+.footer-contacts p {
+   font-size: 18px;
+   font-weight: 700;
+   text-align: center;
+   margin-bottom: 10px
+}
+.footer-contacts a{
+   color: #333333;
+   font-size: 18px;
+   text-decoration: none;
+}
+.footer-contacts i{
+   font-size: 26px;
+   margin-right: 15px;
+}
+.footer-contacts .fa-viber{
+color: #5E3693;
+}
+.footer-contacts .fa-whatsapp{
+   color: #51C65E;
+}
+.footer-contacts div{
+   display: flex;
+   justify-content: space-around;
+
+}
+.header-register{
+   /* position: absolute; */
+   top: 0px;
+   color: blue;
+}
+
+.vzh-name{
+   color: #7E9EC9;
+}
+.register{
+   position: relative;
+   width: 370px;
+   text-align: center;
+   margin: auto;
+   margin-top: 100px;
+   box-shadow: 0 0 15px 0 rgba(255 ,255 ,255, .2);
+   border-radius: 15px;
+
+   /* border-color: solid #00FFFF ; */
+}
+.form-control{
+   margin-bottom: 10px;
+}
+.form-control:hover{
+   box-shadow: 0 0 10px 0 rgba(0 ,0 ,0, .2);
+}
+.btn-primary{
+   margin-top: 10px;
+   padding: 8px 30px;
+   border-radius: 8px;
+}
+/* Портфоліо старт */
+.portfolio-title{
+   text-align: center;
+   margin: 80px 0 40px;
+   font-size: 46px;
+   font-weight: 700px;
+}
+.portfolio-subtitle{
+   margin: 70px auto 0px;
+   weight: 720px;
+}
+.portfolio-subtitle p{
+   text-align: center;
+   font-size: 16px;
+   font-weight: 400;
+   margin-bottom: 15px;
+}
+.portfolio-subtitle p a{
+   text-decoration: none;
+   color: #275BEC;
+   transition: color .2s all;
+}
+.portfolio-subtitle p a:hover{
+   text-decoration: none;
+   color:  #0d4af1;
+}
+.portfolio-image img{
+   width: 100%;
+}
+.back-to-site{
+   display: block;
+   text-align: center;
+   line-height: 55px; /*Якщо ми хочемо поставити текст вертикально по центру то line-height = height*/
+   margin: 45px auto 120px;
+   width: 301px;
+   height: 61px;
+   border: 3px solid #275BEC;
+   border-radius: 50px;
+}
+
+.close-label{
+   display: none;
+   color: white;
+   font-size: 20px;
+}
+.swiper-container {
+   width: 100%;
+   height: 300px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.gallery-top img {
+   height: 600px;
+}
+
+.gallery-top{
+   margin-bottom: 20px;
+}
+
+.gallery-thumbs img {
+   height: 120px;
+}
+
+
+.gallery-top {
+   height: 80%;
+   width: 100%;
+}
+
+.gallery-thumbs {
+   height: 20%;
+   box-sizing: border-box;
+   padding: 10px 0;
+}
+
+.gallery-thumbs .swiper-slide {
+   width: 25%;
+   height: 100%;
+   opacity: 0.4;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+   opacity: 1;
+}
+/* Портфоліо кінець */
+.form-popap{
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   /* background-color: rgba(0, 0 ,0 ,0.8); */
+   z-index: 10;
+   transform: translateY(-100%) scale(0);
+transition-property: transform;
+   transition-duration: 0.7s;
+}
+.form-popap-month{
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background-color: rgba(0, 0 ,0 ,0.8);
+   z-index: 10;
+   transform: translateY(-100%) scale(0);
+   transition-property: transform;
+   transition-duration: 0.7s;
+   display: flex;
+}
+.form-popap-month-active{
+   transform: translateY(0) scale(1);
+}
+.black{
+      background-color: rgba(0, 0 ,0 ,0.8);
+      border-radius: 5%;
+      padding: 20px;
+}
+.form-popap-active{
+   transform: translateY(-10%) scale(1);
+}
+.form-user-popap-active{
+   transform: translateY(0) scale(1) !important;
+}
+.form-user-popap{
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background-color: rgba(0, 0 ,0 ,0.8);
+   z-index: 10;
+   transform: translateY(-100%) scale(0);
+transition-property: transform;
+   transition-duration: 0.7s;
+}
+.popap-close{
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   z-index: 11;
+   color: white;
+}
+.popap-login-close{
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   z-index: 11;
+   color: white;
+}
+.data {
+   display: flex;
+   justify-content: space-between;
+}
+input{
+   border-radius: 5px;
+   padding: 5px;
+   margin-left: 10px;
+}
+
+.margin{
+   margin-right: 10px;
+}
+
+.form-group label{
+   color: white;
+   display: block;
+}
+
+.number{
+   display: flex;
+}
+.date-container{
+   display: flex;
+   flex-direction: column;
+}
+
+.date{
+   display: flex;
+   justify-content: space-around;
+}
+
+.date input{
+   width: 155px;
+}
+.label {
+   color: white;
+   display: flex;
+   justify-content: space-around;
+}
+.closed-month{
+   overflow: hidden !important;
+   width: 100% !important;
+}
+.map {
+   margin-bottom: 20px; 
+   display: flex;
+   justify-content: center;
+}
+.width{
+   width: 100%;
+}
+.booking-table-content{
+   background: #eaeaea;
+   justify-content: space-between;
+   padding: 8px;
+   display: flex;
+   flex-wrap: wrap;
+   height: 193px;
+}
+.booking-month-table-content{
+   background: #eaeaea;
+   justify-content: space-between;
+   padding: 8px;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.data-number{
+   color: white;
+   font-size: 20px;
+   margin-bottom: 0;
+}
+.month-number{
+   color: white;
+   font-size: 20px;
+   margin-bottom: 0 !important;
+}
+.booking-table-day{
+   width: 16%;
+   height: 25px;
+   background: #c1cbd5;
+   margin-bottom: 6px;
+   color: #333;
+   font-size: 16px;
+}
+.booking-btn-unactive{
+   background: #f93a3a;
+   color: #fff;
+}
+
+.booking-btn-active{
+   color: #fff;
+   background: #cd8f1e;
+}
+
+.booking-table-title{
+   color: #fff;
+   padding: 3px 0 10px;
+   background: #103475;
+   font-size: 20px;
+   margin-bottom: 0px;
+}
+
+.booking-btns{
+   display: flex;
+   padding: 10px 20px;
+   /* display: flex; */
+   justify-content: space-between;
+   background: #103475;
+}
+
+.prev , .next {
+   background: #fff;
+   width: 60px;
+   height: 30px;
+   border-radius: 5px;
+   cursor: pointer;
+}
+.prev-year, .next-year{
+   background: #fff;
+   width: 60px;
+   height: 30px;
+   border-radius: 5px;
+   cursor: pointer;
+}
+@keyframes cardAnimationLeft {
+   from{
+      transform: translateX(-200%);
+   }
+   to{
+      transform: translateX(0);
+   }
+}
+@keyframes cardAnimationRight {
+   from {
+      transform: translateX(200%);
+   }
+   to {
+      transform: translateX(0);
+   }
+}
+@media(max-width:1024px) {
+   .gallery-top img {
+      height: 500px;
+   }
+}
+@media(max-width: 770px){
+   .gallery-top img {
+      height: 340px;
+   }
+   .porfolio-cards-wrapper{
+     display: flex;
+     justify-content: center;
+   }
+   .footer-copyright-name{
+      padding-left: 40px;
+   }
+   .vzh-name{
+    margin-left: 50px;
+   }
+
+}
+@media(max-width:567px){
+   .register_buttons {
+      
+      transform: translateY(-100%) scale(0);
+      transition-duration: 1s;
+      transition-property: transform;
+  }
+  .header-user-button{
+     display: flex;
+  }
+  .a-paragrap {
+   
+   font-size: 25px;
+   
+}
+.portfolio{
+   overflow: hidden;
+}
+.black{
+   overflow-y: scroll;
+   height: 480px;
+}
+.close-label{
+   font-size: 14px;
+   margin: 5px 0;
+}
+  .register-active-buttons {
+   transform: translateY(0) scale(1);
+   margin-top: 30px;
+   transition-duration: 1s;
+   transition-property: transform;
+}
+.register{
+   width: 254px;
+}
+
+   .gallery-top img {
+      height: 240px;
+   }
+   .footer-links ,.footer-info{
+      margin-bottom: 35px;
+   }
+   .header{
+      height: 460px;
+   }
+   .header-title{
+      font-size: 32px;
+   }
+   .header-subtitle{
+      font-size: 20px;
+   }
+   .header-arrow{
+      transform: translate(0,0);
+   }
+
+   .portfolio-header{
+      margin: 40px 0 30px;
+      font-size: 32px;
+      text-align: center;
+   }
+   .card-title{
+      font-size: 18px;
+      margin-bottom: 10px;
+   }
+   .card p{
+      font-size: 14px;
+   }
+   .card-image{
+      /* width: 100%; */
+      height: auto;
+   } 
+   .card{
+      width: 100%;
+   }
+   .vzh-name{
+      color: white;
+      text-align: center;
+   }
+   .footer-icons p{
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 20px;
+   }
+   .footer-row{
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+   }
+   .footer-icons-row{
+      justify-content: space-around;
+   }
+   .footer-copyright-name{
+      font-size: 18px;
+      text-align: center;
+   }
+   .footer-copyright p{
+      text-align: center;
+      margin-bottom: 40px;
+   }
+   .footer-info span{
+      font-size: 16px;
+   }
+}
+
+@media(max-width:400px){
+   .gallery-thumbs{
+      display: none;
+   }
+   .portfolio-title{
+      font-size: 30px;
+   }
+   .gallery-top img {
+      height: 200px;
+   }
+}
+
+/*INFO PAGE START*/
+.info-title{
+   margin: 80px 40px;
+   font-size: 46px;
+   font-weight: 700;
+   text-align: center;
+}
+
+/*INFO PAGE END*/
